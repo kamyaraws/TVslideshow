@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Website Slideshow</title>
+    <script>
+        const links = [
+            "https://tinyurl.com/bdz4v38d",
+            "https://tinyurl.com/yrk29zt6"
+        ];
+        const duration = 5 * 60 * 1000; // 5 minutes in milliseconds
+        let currentIndex = 0;
+
+        function rotateLinks() {
+            window.location.href = links[currentIndex];
+            currentIndex = (currentIndex + 1) % links.length;
+            setTimeout(rotateLinks, duration);
+        }
+
+        window.onload = rotateLinks;
+    </script>
+</head>
+<body>
+    <p>Loading reports...</p>
+</body>
+</html>
